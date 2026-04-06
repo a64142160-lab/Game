@@ -32,6 +32,28 @@ Game/
 
 ---
 
+## First time? Get the code on your own device
+
+If the project is only visible on GitHub and not on your laptop/PC yet, do this first:
+
+```bash
+git clone https://github.com/a64142160-lab/Game.git
+cd Game
+```
+
+Alternative:
+- GitHub repo page → **Code** → **Download ZIP**
+- Extract ZIP and open that folder in your terminal/VS Code
+
+If your branch already exists on GitHub (example from PR: `codex/build-roast-battle-game-prototype`):
+
+```bash
+git fetch origin
+git checkout codex/build-roast-battle-game-prototype
+```
+
+---
+
 ## What is already built
 
 ### Implemented now
@@ -172,3 +194,22 @@ Body:
 ## Notes
 - This code is intended as a scalable starter architecture, not final production moderation.
 - Before launch, add robust safety policies, legal documents, parental compliance handling, and anti-abuse telemetry.
+
+---
+
+## Troubleshooting install issues
+
+If `npm install` throws `403 Forbidden`:
+- You may be behind a restricted network/proxy/firewall.
+- Try another network (mobile hotspot), or configure corporate npm proxy.
+- Run:
+
+```bash
+npm config get registry
+```
+
+Expected:
+
+```bash
+https://registry.npmjs.org/
+```
