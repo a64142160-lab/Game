@@ -60,9 +60,10 @@ export default function ProfileGate({ onReady }) {
   }
 
   return (
-    <div className="card">
+    <div className="card profile-gate-card">
+      <p className="kicker">WELCOME TO THE ARENA</p>
       <h1>Roast Rumble 🔥</h1>
-      <p>Set up your profile to start battle mode.</p>
+      <p>Create your profile and unlock battle mode.</p>
       <form className="form" onSubmit={submit}>
         <label>
           Username

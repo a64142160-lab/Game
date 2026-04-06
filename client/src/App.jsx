@@ -93,15 +93,45 @@ export default function App() {
 
   return (
     <main className="container">
-      <div className="card">
+      <header className="hero">
+        <div>
+          <p className="kicker">GEN Z ROAST ARENA</p>
+          <h1>Roast Rumble ⚡</h1>
+          <p className="subtitle">Battle AI, flex your punchlines, stack W cards.</p>
+        </div>
+        <div className="hero-pill">VS AI LIVE</div>
+      </header>
+
+      <div className="card profile-card">
         <h2>Player Profile</h2>
-        <p>
-          <strong>{profile.username}</strong> • Age {profile.age} • {profile.language} • {profile.tier}
-        </p>
-        <p>
-          W/L: {profile.stats.wins}/{profile.stats.losses} • Battles: {profile.stats.battles} • Streak: {profile.stats.streak} • Coins:{' '}
-          {profile.stats.coins}
-        </p>
+        <div className="chips">
+          <span className="chip">{profile.username}</span>
+          <span className="chip">Age {profile.age}</span>
+          <span className="chip">{profile.language}</span>
+          <span className="chip">{profile.tier}</span>
+        </div>
+        <div className="stat-grid">
+          <div className="stat-tile">
+            <p>Wins</p>
+            <strong>{profile.stats.wins}</strong>
+          </div>
+          <div className="stat-tile">
+            <p>Losses</p>
+            <strong>{profile.stats.losses}</strong>
+          </div>
+          <div className="stat-tile">
+            <p>Battles</p>
+            <strong>{profile.stats.battles}</strong>
+          </div>
+          <div className="stat-tile">
+            <p>Streak</p>
+            <strong>{profile.stats.streak}</strong>
+          </div>
+          <div className="stat-tile">
+            <p>Coins</p>
+            <strong>{profile.stats.coins}</strong>
+          </div>
+        </div>
       </div>
 
       <RpsRound result={rpsResult} onPlay={playRps} loading={loadingRps} />

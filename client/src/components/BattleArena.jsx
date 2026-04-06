@@ -32,6 +32,7 @@ export default function BattleArena({ topics, accessModes, onSubmit, loading, ba
   return (
     <div className="card">
       <h2>VS AI Battle</h2>
+      <p className="muted">Tip: keep it funny + topic-based for higher score.</p>
       <form className="form" onSubmit={handleSubmit}>
         <label>
           Topic
@@ -78,7 +79,7 @@ export default function BattleArena({ topics, accessModes, onSubmit, loading, ba
       </form>
 
       {battleResult && (
-        <div className="result-box">
+        <div className={`result-box ${battleResult.winner === 'player1' ? 'winner' : 'loser'}`}>
           <h3>{battleResult.winner === 'player1' ? 'W Card 🏆' : 'L Card 💀'}</h3>
           <p>
             You: <strong>{battleResult.player1Score}</strong> | AI: <strong>{battleResult.player2Score}</strong>

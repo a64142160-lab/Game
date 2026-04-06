@@ -9,6 +9,7 @@ A full-stack starter for your roast battle game with:
 - Easy/Normal difficulty
 - AI judging with score + savage reason + funniest line
 - Basic W/L card result
+- Upgraded neon/glassmorphism UI styling for a more Gen Z look
 
 > This implementation is a **working Phase 1 build** from your roadmap, structured so you can extend to multiplayer, coins, ads, and paid tiers in later phases.
 
@@ -52,6 +53,12 @@ git fetch origin
 git checkout codex/build-roast-battle-game-prototype
 ```
 
+To pull latest updates on that branch later:
+
+```bash
+git pull origin codex/build-roast-battle-game-prototype
+```
+
 ---
 
 ## What is already built
@@ -75,6 +82,7 @@ git checkout codex/build-roast-battle-game-prototype
   - funniestLine
   - aiReply
 - ✅ Fallback scoring if Groq key not configured
+- ✅ Polished frontend visuals (hero header, chips, stat tiles, improved result cards)
 
 ### Not yet (next phases)
 - Real-time PvP / async PvP
